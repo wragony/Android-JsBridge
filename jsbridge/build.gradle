@@ -17,14 +17,41 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    task makeJar(type: Copy) {
+        def jarName = "Android-JsBridge-$android.defaultConfig.versionName\\.jar"
+        //删除存在的
+        delete "${project.rootDir}/jars/" + jarName
+        //设置拷贝的文件
+        from('build/intermediates/aar_main_jar/release/')
+        into("${project.rootDir}/jars/")
+        include('classes.jar')
+        //重命名
+        rename('classes.jar', jarName)
+
+        println '>>> flat jar'
+    }
+
+    makeJar.dependsOn(build)
+
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.appcompat:appcompat:1.1.0'
 }
