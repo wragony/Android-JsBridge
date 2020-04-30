@@ -1,0 +1,3 @@
+rootProject.name = 'Android-JsBridge'
+include ':jsbridge'
+include ':sample'

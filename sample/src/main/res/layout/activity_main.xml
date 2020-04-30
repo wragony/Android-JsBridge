@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <Button
+    android:id="@+id/btn_system_webView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="System WebView"
+    android:textAllCaps="false"
+    android:layout_marginTop="20dp" />
+
+  <Button
+    android:id="@+id/btn_custom_webwiew"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Custom WebView"
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/btn_fragment_webwiew"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Fragment WebView"
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/btn_x5_webwiew"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="X5 WebView"
+    android:textAllCaps="false" />
+
+  <Button
+    android:id="@+id/btn_uc_webwiew"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="UC WebView"
+    android:textAllCaps="false" />
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+  <external-path
+    name="external"
+    path="Android/data/com.wragony.android.jsbridge.sample" />
+
+  <external-files-path
+    name="external_file_path"
+    path="Android/data/com.wragony.android.jsbridge.sample/files" />
+
+  <external-cache-path
+    name="external_cache_path"
+    path="Android/data/com.wragony.android.jsbridge.sample/cache" />
+</paths>

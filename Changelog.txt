@@ -1,0 +1,10 @@
+JsBridge Changelog
+==================
+
+Version History
+---------------
+
+v1.0.0
++ 支持AndroidX
++ 支持注入到全局window对象
++ 兼容uc及x5内核webview
