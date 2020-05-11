@@ -27,7 +27,7 @@ final class JBCallbackImpl implements JBCallback {
             return;
         }
         String callback = method.getCallback();
-        final StringBuilder builder = new StringBuilder("javascript:");
+        final StringBuilder builder = new StringBuilder();
         builder.append("if(" + callback + " && " + callback + "['" + name + "']){");
         builder.append("var callback = " + callback + "['" + name + "'];");
         builder.append("if (typeof callback === 'function'){callback(");
@@ -43,11 +43,10 @@ final class JBCallbackImpl implements JBCallback {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                if (method.getModule().mWebView instanceof WebView) {
-                    ((WebView) method.getModule().mWebView).loadUrl(builder.toString());
-                } else if (method.getModule().mWebView instanceof IWebView) {
-                    ((IWebView) method.getModule().mWebView).loadUrl(builder.toString());
-                }
+                /**
+                 * update by wragony
+                 */
+                JBUtils.evalJs(method.getModule().mWebView,builder.toString(),null);
             }
         });
     }

@@ -320,7 +320,7 @@ public final class JBUtils {
         if (TextUtils.isEmpty(methodName) || mWebView == null) {
             return;
         }
-        final StringBuilder builder = new StringBuilder("javascript:");
+        final StringBuilder builder = new StringBuilder();
         builder.append("try{");
         builder.append("var callback=" + methodName + ";");
         builder.append("if (callback && typeof callback === 'function'){callback(");
