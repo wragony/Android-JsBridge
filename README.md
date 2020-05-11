@@ -17,12 +17,12 @@ Fork 自 [pengwei1024](https://github.com/pengwei1024/JsBridge) 前辈的代码�
 下载 [the latest JAR](./jars) 或 Gradle依赖:
 
 ```
-implementation 'com.wragony.android.jsbridge:jsbridge:1.0.0'
+implementation 'com.wragony.android.jsbridge:jsbridge:1.0.1'
 ```
 该库依赖了`androidx.appcompat:appcompat`, 如果项目中已经存在,请排除
 
 ```
-implementation('com.wragony.android.jsbridge:jsbridge:1.0.0') {
+implementation('com.wragony.android.jsbridge:jsbridge:1.0.1') {
         exclude module: 'appcompat'
 }
 ```
