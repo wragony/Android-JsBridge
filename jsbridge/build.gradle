@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 
-apply from: "./bintray_upload.gradle"
 
 android {
     compileSdkVersion 29
@@ -53,5 +52,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
 }
+
+apply from: "./bintray_upload.gradle"
