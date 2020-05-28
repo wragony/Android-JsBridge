@@ -31,7 +31,7 @@
     <activity android:name="com.wragony.android.jsbridge.sample.view.UcWebViewActivity" />
 
     <provider
-      android:name="androidx.core.content.FileProvider"
+      android:name="android.support.v4.content.FileProvider"
       android:authorities="${applicationId}.appfileprovider"
       android:exported="false"
       android:grantUriPermissions="true">

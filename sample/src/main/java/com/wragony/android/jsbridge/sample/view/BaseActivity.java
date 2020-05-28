@@ -6,11 +6,11 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.view.MenuItemCompat;
 import com.wragony.android.jsbridge.sample.JBApplication;
 import java.util.List;
 

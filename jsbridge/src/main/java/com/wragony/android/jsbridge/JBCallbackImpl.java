@@ -2,8 +2,8 @@ package com.wragony.android.jsbridge;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import androidx.annotation.NonNull;
 import com.wragony.android.jsbridge.module.datatype.JBCallback;
 
 final class JBCallbackImpl implements JBCallback {

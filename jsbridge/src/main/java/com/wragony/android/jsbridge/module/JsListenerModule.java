@@ -1,9 +1,9 @@
 package com.wragony.android.jsbridge.module;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.webkit.WebView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import com.wragony.android.jsbridge.JBUtils;
 import com.wragony.android.jsbridge.common.IWebView;
 

@@ -2,8 +2,8 @@ package com.wragony.android.jsbridge.sample.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
-import androidx.annotation.Nullable;
 import com.wragony.android.jsbridge.sample.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
