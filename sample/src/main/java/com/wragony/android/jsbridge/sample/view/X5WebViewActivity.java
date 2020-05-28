@@ -19,7 +19,7 @@ import com.wragony.android.jsbridge.sample.R;
 import com.wragony.android.jsbridge.sample.module.ListenerModule;
 import com.wragony.android.jsbridge.sample.module.NativeModule;
 import com.wragony.android.jsbridge.sample.module.ServiceModule;
-import com.wragony.android.jsbridge.sample.module.StaticModule;
+import com.wragony.android.jsbridge.sample.module.Static2Module;
 import com.wragony.android.jsbridge.sample.util.TakePhotoResult;
 import com.wragony.android.jsbridge.sample.util.WebEvent;
 import com.wragony.android.jsbridge.sample.widget.X5WebView;
@@ -44,7 +44,7 @@ public class X5WebViewActivity extends BaseActivity implements WebEvent {
 
         setTitle("X5 WebView");
 
-        jsBridge = JsBridge.loadModule("window", "ready", new ServiceModule(), new StaticModule(), new ListenerModule(), new NativeModule());
+        jsBridge = JsBridge.loadModule("window", "ready", new ServiceModule(), new Static2Module(), new ListenerModule(), new NativeModule());
 
         WebView.setWebContentsDebuggingEnabled(true);
 

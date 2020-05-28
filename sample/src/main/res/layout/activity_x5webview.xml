@@ -11,9 +11,9 @@
 
   <Button
     android:id="@+id/button_native"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
+    android:layout_gravity="bottom|center_horizontal"
     android:text="Native Call JS" />
 
 </FrameLayout>
