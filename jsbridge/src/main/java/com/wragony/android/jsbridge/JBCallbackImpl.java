@@ -3,9 +3,7 @@ package com.wragony.android.jsbridge;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
-import android.webkit.WebView;
 import androidx.annotation.NonNull;
-import com.wragony.android.jsbridge.common.IWebView;
 import com.wragony.android.jsbridge.module.datatype.JBCallback;
 
 final class JBCallbackImpl implements JBCallback {

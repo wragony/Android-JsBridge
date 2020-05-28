@@ -150,6 +150,20 @@ public final class JBUtils {
                         return Double.parseDouble(parameter.getValue());
                     case JSArgumentType.TYPE_LONG:
                         return Long.parseLong(parameter.getValue());
+                    case JSArgumentType.TYPE_ARRAY:
+                        break;
+                    case JSArgumentType.TYPE_BOOL:
+                        break;
+                    case JSArgumentType.TYPE_FUNCTION:
+                        break;
+                    case JSArgumentType.TYPE_NUMBER:
+                        break;
+                    case JSArgumentType.TYPE_OBJECT:
+                        break;
+                    case JSArgumentType.TYPE_STRING:
+                        break;
+                    case JSArgumentType.TYPE_UNDEFINE:
+                        break;
                 }
             } catch (NumberFormatException e) {
                 return new JBArgumentErrorException(e.getMessage());
