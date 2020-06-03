@@ -17,15 +17,16 @@ Fork 自 [pengwei1024](https://github.com/pengwei1024/JsBridge) 前辈的代码�
 下载 [the latest JAR](./jars) 或 Gradle依赖:
 
 ```
-implementation 'com.wragony.android.jsbridge:jsbridge:1.0.1'
+implementation 'com.wragony.android.jsbridge:jsbridge:1.0.3'
 ```
 该库依赖了`androidx.appcompat:appcompat`, 如果项目中已经存在,请排除
 
 ```
-implementation('com.wragony.android.jsbridge:jsbridge:1.0.1') {
+implementation('com.wragony.android.jsbridge:jsbridge:1.0.3) {
         exclude module: 'appcompat'
 }
 ```
+
 
 ## Examples
 我们以 JS 调用原生模块来实现 `ajax 跨域请求`来简单介绍下库的使用
