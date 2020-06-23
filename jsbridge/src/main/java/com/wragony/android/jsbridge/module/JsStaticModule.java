@@ -6,6 +6,6 @@ public abstract class JsStaticModule extends JsModule {
 
     @Override
     public final String getModuleName() {
-        return STATIC_METHOD_NAME;
+        return hashCode() + STATIC_METHOD_NAME;
     }
 }

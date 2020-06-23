@@ -1,6 +1,6 @@
 package com.wragony.android.jsbridge.module.datatype;
 
-import androidx.annotation.UiThread;
+import android.support.annotation.UiThread;
 
 public interface JBCallback {
 

@@ -1,8 +1,8 @@
 package com.wragony.android.jsbridge;
 
+import android.support.annotation.NonNull;
 import android.webkit.JsPromptResult;
 import android.webkit.WebView;
-import androidx.annotation.NonNull;
 import com.wragony.android.jsbridge.common.IPromptResult;
 import com.wragony.android.jsbridge.common.IWebView;
 import com.wragony.android.jsbridge.common.OnValueCallback;
