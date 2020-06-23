@@ -46,7 +46,7 @@ public class X5WebViewActivity extends BaseActivity implements WebEvent {
 
         setTitle("X5 WebView");
 
-        jsBridge = JsBridge.loadModule("window", "ready", new ServiceModule(), new Static2Module(), new ListenerModule(), new NativeModule());
+        jsBridge = JsBridge.loadModule("window", "onJsBridgeReady", new ServiceModule(), new Static2Module(), new ListenerModule(), new NativeModule());
 
         WebView.setWebContentsDebuggingEnabled(true);
 
@@ -58,12 +58,12 @@ public class X5WebViewActivity extends BaseActivity implements WebEvent {
             @Override
             public void onPageStarted(WebView webView, String s, Bitmap bitmap) {
                 super.onPageStarted(webView, s, bitmap);
-                jsBridge.injectJs(mX5WebView);
             }
 
             @Override
             public void onPageFinished(WebView webView, String s) {
                 super.onPageFinished(webView, s);
+                jsBridge.injectJs(mX5WebView);
             }
         });
         mX5WebView.setPromptResult(new PromptResultCallback() {
@@ -89,7 +89,7 @@ public class X5WebViewActivity extends BaseActivity implements WebEvent {
             @Override
             public void accept(Boolean aBoolean) throws Exception {
                 if (aBoolean) {
-                    mX5WebView.loadUrl("file:///android_asset/sample.html");
+                    mX5WebView.loadUrl("file:///android_asset/x5.html");
                 }
             }
         });
