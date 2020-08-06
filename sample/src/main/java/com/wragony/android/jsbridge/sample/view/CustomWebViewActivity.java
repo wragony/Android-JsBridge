@@ -61,7 +61,7 @@ public class CustomWebViewActivity extends BaseActivity implements WebEvent {
 
             @Override
             public void onClick(View v) {
-                jsBridge.callJs("test", null, new OnValueCallback() {
+                jsBridge.callJs("test", "", new OnValueCallback() {
                     @Override
                     public void onCallBack(String data) {
                         Log.d(JsBridge.TAG, "onPageFinished:data=" + data);
