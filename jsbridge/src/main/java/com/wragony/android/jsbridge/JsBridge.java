@@ -7,6 +7,7 @@ import com.wragony.android.jsbridge.common.IPromptResult;
 import com.wragony.android.jsbridge.common.IWebView;
 import com.wragony.android.jsbridge.common.OnValueCallback;
 import com.wragony.android.jsbridge.module.JsModule;
+import com.wragony.android.jsbridge.module.datatype.JsObject;
 
 public abstract class JsBridge {
 
@@ -29,6 +30,8 @@ public abstract class JsBridge {
     public abstract void release();
 
     public abstract void callJs(String functionName, String params, OnValueCallback mCallback);
+
+    public abstract void callJs(String functionName, JsObject params, OnValueCallback mCallback);
 
     public static JsBridge loadModule(JsModule... modules) {
         return new JsBridgeImpl(modules);
