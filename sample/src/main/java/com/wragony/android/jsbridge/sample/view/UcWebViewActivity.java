@@ -4,11 +4,13 @@ import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+
 import com.uc.webview.export.WebView;
 import com.uc.webview.export.WebViewClient;
 import com.wragony.android.jsbridge.JsBridge;

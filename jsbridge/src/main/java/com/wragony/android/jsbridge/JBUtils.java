@@ -3,11 +3,13 @@ package com.wragony.android.jsbridge;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.webkit.ValueCallback;
 import android.webkit.WebView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.wragony.android.jsbridge.common.IWebView;
 import com.wragony.android.jsbridge.common.OnValueCallback;
 import com.wragony.android.jsbridge.exception.JBArgumentErrorException;
@@ -330,7 +332,7 @@ public final class JBUtils {
     }
 
     public static void callJsMethod(@NonNull String methodName, @NonNull final Object mWebView,
-            @Nullable Object... args) {
+                                    @Nullable Object... args) {
         if (TextUtils.isEmpty(methodName) || mWebView == null) {
             return;
         }

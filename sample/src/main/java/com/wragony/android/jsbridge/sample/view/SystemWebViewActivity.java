@@ -8,7 +8,6 @@ import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.ConsoleMessage;
@@ -16,6 +15,9 @@ import android.webkit.JsPromptResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.core.content.FileProvider;
+
 import com.wragony.android.jsbridge.JsBridge;
 import com.wragony.android.jsbridge.sample.BuildConfig;
 import com.wragony.android.jsbridge.sample.JBApplication;
