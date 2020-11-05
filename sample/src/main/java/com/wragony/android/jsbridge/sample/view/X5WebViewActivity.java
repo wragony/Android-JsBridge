@@ -75,7 +75,7 @@ public class X5WebViewActivity extends BaseActivity implements WebEvent {
         nativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jsBridge.callJs("test", null, new OnValueCallback() {
+                jsBridge.callJs("test", "", new OnValueCallback() {
                     @Override
                     public void onCallBack(String data) {
                         Log.d(JsBridge.TAG, "onCallBack:data=" + data);

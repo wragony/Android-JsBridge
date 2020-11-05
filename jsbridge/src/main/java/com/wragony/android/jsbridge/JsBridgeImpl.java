@@ -17,6 +17,7 @@ import com.wragony.android.jsbridge.exception.JBArgumentErrorException;
 import com.wragony.android.jsbridge.module.JsModule;
 import com.wragony.android.jsbridge.module.JsStaticModule;
 import com.wragony.android.jsbridge.module.datatype.JSArgumentType;
+import com.wragony.android.jsbridge.module.datatype.JsObject;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -210,6 +211,30 @@ class JsBridgeImpl extends JsBridge {
                     builder.append("'");
                     builder.append(params);
                     builder.append("'");
+                }
+                builder.append(");");
+                String jsCode = builder.toString();
+
+                JBUtils.evalJs(mWebView, jsCode, mCallback);
+            }
+        });
+    }
+
+    @Override
+    public void callJs(final String functionName, final JsObject params, final OnValueCallback mCallback) {
+        if (mWebView == null) {
+            JBLog.d("Please call injectJs first");
+            return;
+        }
+        handler.post(new Runnable() {
+
+            @Override
+            public void run() {
+                StringBuilder builder = new StringBuilder();
+                builder.append(functionName);
+                builder.append("(");
+                if (null != params) {
+                    builder.append(params.convertJS());
                 }
                 builder.append(");");
                 String jsCode = builder.toString();
