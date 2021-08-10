@@ -1,5 +1,5 @@
 # Android-JsBridge
-轻量可扩展 Android WebView 和 Javascript 双向交互框架
+轻量可扩展 Android WebView 和 Javascript 双向交互框架【已迁入到jitpack平台】
 
 Fork 自 [pengwei1024](https://github.com/pengwei1024/JsBridge) 前辈的代码，进行了部分重构，加入一些新的特性
 
@@ -16,13 +16,22 @@ Fork 自 [pengwei1024](https://github.com/pengwei1024/JsBridge) 前辈的代码�
 ## Getting Started
 下载 [the latest JAR](./jars) 或 Gradle依赖:
 
+根gradle里加入
+
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+
 ```
-implementation 'com.wragony.android.jsbridge:jsbridge:1.0.3'
+implementation 'com.github.wragony:Android-JsBridge:androidx_1.0.5'
 ```
 该库依赖了`androidx.appcompat:appcompat`, 如果项目中已经存在,请排除
 
 ```
-implementation('com.wragony.android.jsbridge:jsbridge:1.0.3) {
+implementation('com.github.wragony:Android-JsBridge:androidx_1.0.5') {
         exclude module: 'appcompat'
 }
 ```
